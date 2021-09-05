@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pColor:#f60f20;
+    --pShadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+ul li{
+    list-style: none;
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    border-radius: 0 100% 0 0;
+    display: flex;
+    box-shadow: var(--pShadow);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background:rgba(255, 0, 0, 0.377);
+    backdrop-filter: blur(3px);
+    z-index: 15;
+    border: 1px solid rgba(255,255, 2555, 0.06);
+}
+.navigation.active{
+    left: 0;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    text-align: center;
+}
+.navigation ul li a{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: rgb(247, 241, 241);
+    font-weight: 300;
+    text-shadow: 2px 2px 7px black;
+    text-transform: capitalize;
+}
+.navigation ul li a:hover{
+    color: var(--pColor);
+    font-weight: bold;
+    text-shadow: 2px 2px 7px rgba(216, 5, 5, 0.06);
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navigation .social-links a{
+    display: inline-block;
+    transform: scale(0.6);
+}
+.navigation .email-icon{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 20;
+    width: 150px;
+}
+section{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+}
+.home-content{
+    z-index: 10;
+    max-width: 600px;
+    position: relative;
+}
+.home-img{
+    height: 110%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+p{
+    margin: 20px 0px 10px 0;
+    font-size: 1.2rem;
+}
+.btn{
+    display: inline-block;
+    background:var(--pColor);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    border: none;
+    text-transform: capitalize;
+    box-shadow: var(--pShadow);
+}
+.btn:hover{
+    transform: scale(0.95);
+}
+.toggle{
+    position: fixed;
+    top: 2px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    right: 2px;
+    height:45px;
+    width: 55px;
+    justify-content: space-around;
+    background:var(--pColor);
+    z-index: 20;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: .3rem;
+    box-shadow: var(--pShadow);
+}
+.toggle .link{
+    display: block;
+    min-height: 5px;
+    width: 80%;
+    background: white;
+}
